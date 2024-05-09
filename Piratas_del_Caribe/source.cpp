@@ -54,7 +54,7 @@ void cPirataMaldito::mostrarAtributos() {
 		cout << "Es un fantasma.\n";
 	}
 	else {
-		cout << "No es inmortal.\n";
+		cout << "Es inmortal.\n";
 	}
 }
 
