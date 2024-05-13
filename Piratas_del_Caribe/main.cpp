@@ -12,34 +12,32 @@ int main() {
 
 	cNave<cSiervos>Odisey(comodoro, "Odissey", tripulacion_comodoro);
 
-	cout << Odisey.nombre << endl;
+	cout << Odisey.getNombre() << endl;
 
 	cNave<cPirata>Interceptor(jack, "El Interceptor", tripulacion_jack);
 
-	Interceptor.capitan.mostrarAtributos();
+	Interceptor.getCapitan().mostrarAtributos();
 
 	cNave<cPirataMaldito>PerlaNegra(barbossa, "La perla negra", tripulacion_barbosa);
 
 	for (int i = 0; i < 10; i++) {
-		PerlaNegra.tripulacion[i].mostrarAtributos();
+		PerlaNegra.getTripulacion()[i].mostrarAtributos();
 	}
 
 	for (int i = 0; i < 10; i++) {
-		PerlaNegra.tripulacion[i].setSkin(true);
+		PerlaNegra.getTripulacion()[i].setSkin(true);
 	}
 
 	for (int i = 0; i < 10; i++) {
-		PerlaNegra.tripulacion[i].mostrarAtributos();
+		PerlaNegra.getTripulacion()[i].mostrarAtributos();
 	}
 
 	barbossa.mostrarAtributos();
 	comodoro.mostrarAtributos();
 
 	for (int i = 0; i < 10; i++) {
-		Interceptor.tripulacion[i].mostrarAtributos();
+		Interceptor.getTripulacion()[i].mostrarAtributos();
 	}
-
-	
 
 
 	delete [] tripulacion_jack;

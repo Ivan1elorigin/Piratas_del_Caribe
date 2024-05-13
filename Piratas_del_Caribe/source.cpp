@@ -8,11 +8,27 @@ cPersona::cPersona(string _nombre) {
 	nombre = _nombre;
 }
 
+string cPersona::getNombre() {
+	return nombre;
+}
+
+void cPersona::setNombre(string _nombre) {
+	nombre = _nombre;
+}
+
 cSiervos::cSiervos() : cPersona() {
 	cargo = "Marinero raso";
 }
 
 cSiervos::cSiervos(string _nombre, string _cargo) : cPersona(_nombre) {
+	cargo = _cargo;
+}
+
+string cSiervos::getCargo() {
+	return cargo;
+}
+
+void cSiervos::setCargo(string _cargo) {
 	cargo = _cargo;
 }
 
@@ -23,6 +39,15 @@ cPirata::cPirata() : cPersona() {
 cPirata::cPirata(string _nombre, double _recompensa) : cPersona(_nombre) {
 	recompensa = _recompensa;
 }
+
+double cPirata::getRecompensa() {
+	return recompensa;
+}
+
+void cPirata::setRecompensa(double _recompensa) {
+	recompensa = _recompensa;
+}
+
 cPirataMaldito::cPirataMaldito() : cPersona() {
 	skinZombie = false;
 }
@@ -60,6 +85,10 @@ void cPirataMaldito::mostrarAtributos() {
 
 void cPirataMaldito::setSkin(bool luna) {
 	skinZombie = luna; //Si hay luna, tiene apariencia de esqueleto-zombie.
+}
+
+bool cPirataMaldito::getSkin() {
+	return skinZombie;
 }
 
 
